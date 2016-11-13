@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Make America Great Again! | Donald J Trump for President</title>
+<meta name='keywords' content=''/>
+<meta name='description' content='Donald J. Trump is the very definition of the American success story, continually setting the standards of excellence in business, real estate and entertainment. Show support for his presidential campaign here.'/>
+<link rel='canonical' href='https://www.donaldjtrump.com'/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="/favicon.ico?v=1.2">
+<link rel="stylesheet" href="https://assets.donaldjtrump.com/screen04172016.css?10082016" type="text/css"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Old+Standard+TT:400,700,400italic' rel='stylesheet' type='text/css'>
+ 
+<script src="//assets.adobedtm.com/ccb66fd3556ba80512894ddaac0f1024ce58d90d/satelliteLib-dd574bd6e7e9efe3999269eb66caa610091049a9.js"></script>
+<!--[if IE]>
+<script src="/js/html5shiv.js"></script>
+<![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script async src="/js/jquery.customSelect.min.js"></script>
+<script async src="//vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+<script async src="//vjs.zencdn.net/5.0.2/video.min.js"></script>
+<script>
+	if (window.top !== window.self) window.top.location.replace(window.self.location.href);
+	$(function(){
+	    // Mobile Menu
+	    $('.mobile_menu_icon').on('click',function(){
+	        $(this).toggleClass('active');
+	        $('nav').slideToggle();
+	        return false;
+	    });
+	    // Popup Close
+		$('#popup_close a').on('click',function(){
+			$('#popup_bkg').hide();
+			$('#popup_form_wrapper').hide();
+			return false;
+		});
+		// Popup Form
+		$('a.pop_form').on('click',function(){
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			$('#popup_bkg').show();
+			$('#popup_form_wrapper').fadeIn(500,function(){
+				if(!$('#popup_form_wrapper').hasClass('active')){
+					$('select').customSelect();
+					$('#popup_form_wrapper').addClass('active');
+				}
+			});
+			return false;
+		});
+
+	    // Form Submission Control
+	    $('#new_submission').on('submit', function(evt){
+	        $('#new_submission').find('span.error').remove();
+	        $('#popup_form_items input.submit').val('Sending... Wait');
+	        evt.preventDefault();
+	        var params = $('#new_submission').find(':input').serializeArray();
+	        $.ajax({
+	            dataType:'json',
+	            data: params,
+	            type: 'POST',
+	            success: function(data){
+	                if (data.success == 'yes'){
+	                	$('#popup_top').hide();
+	                	$('#popup_form_items').html('<h3>Thank You For Signing Up!</h3><h4>Join Us On Social Media</h4><div id="thank_you_social_buttons"><a href="https://twitter.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/twitter.png" alt="Trump Twitter"></a><a href="https://www.facebook.com/DonaldTrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/facebook.png" alt="Trump Facebook"></a><a href="https://instagram.com/realdonaldtrump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/instagram.png" alt="Trump Instagram"></a><a href="https://www.youtube.com/user/trump" onclick="window.open (this.href); return false;"><img src="https://assets.donaldjtrump.com/site/youtube.png" alt="Trump Youtube"></a></div>');
+	                } else{
+	                    for (var item in data.errors){
+	                    	if(data.errors[item].field_id == '205'){
+	                    		console.log('captcha');
+	                        	$('#forms_field_205').find('label').after("<span class='error'>You must check the captcha</span>");
+	                    	}else{
+	                        	var itemID = '#ddform_'+data.errors[item].field_id;
+		                        var type = $(itemID).attr('type');
+		                        var fieldLabel = $(itemID).closest('.dform_element').find('label').text().replace('*','');
+		                        var errMsg = fieldLabel+' is required';
+		                        if(type == 'email'){
+		                            errMsg = 'You must enter a valid email';
+		                        }
+		                        $(itemID).parent('.dform_container').append("<span class='error'>"+errMsg+"</span>");
+	                    	}
+	                    }
+	        			$('#popup_form_items input.submit').val('Submit');
+	                }
+	            }
+	        });
+	        return false;
+	    });
+
+	    // Form Error Remover
+		$('#new_submission input').on('focus',function(){$(this).next('span.error').remove();});
+
+	    // Form Error Remover(2)
+		$('#new_submission select').on('change',function(){$(this).parent('div').find('span.error').remove();});
+	});
+</script>
+<meta name="google-site-verification" content="nvk3DvHp6Bufpl29K67QDP7rZLJQ0hks5nlDNd0SJoA">
+<meta property="og:title" content="SHOW YOUR SUPPORT FOR DONALD J. TRUMP">
+<meta property="og:image" content="https://assets.donaldjtrump.com/_july16/logos/og_image.jpg">
+<style type="text/css">#top_container{background-color:#2b325f;height:25px;}header{background-color:#fff;}#wrapper{margin:0 auto -237px}#wrapper header{height:80px;border-top:none;border-bottom:none;}#top_navigation ul li a{color:#fff;font-family:'Montserrat',serif!important;}#wrapper header nav{background-color:#fff;}#wrapper header nav ul li.nav_donate{border-left:1px solid #c9c9c9;}header nav ul li{border-left:1px solid #c9c9c9;}#wrapper header nav ul li #nav_donate{background-color:#bc0000;color:#fff;}#wrapper header nav ul li a{color:#464646;}header nav ul li a{line-height:80px}header nav ul li ul{top:81px;background-image:none;}header .brand{top:4px;}header .brand:after{background:transparent;content:none;}.hero{width:100%;min-width:1080px;height:530px;position:relative;overflow:hidden;background:transparent;}.hero .hero_image{width:100%;min-width:1080px;height:auto;}.hero .hero_image img{min-width:100%;min-height:445px;}.home-container{margin-top:0;}.home-container .newsletter{background-color:#fff;height:275px;margin-top:0;}.home-container .newsletter .introinnerw{width:1078px;position:relative;margin:0 auto;}.home-container .newsletter .introinnerw #introptext{width:530px;position:absolute;margin:0;text-align:left;right:0;right:30px;}#introptext p{font-family:"Montserrat",serif!important;color:#464646;font-size:14px;line-height:26px;margin:0 0 15px;}.signup-form{width:100%;min-width:1080px;background-image:url('https://assets.donaldjtrump.com/form-bkg-min.png');background-size:cover;background-repeat:no-repeat;height:175px;}.signup-form .signup-container{width:1078px;position:relative;margin:0 auto;}.signup-form .signup-container h4{font-size:24px;color:#fff;margin-top:20px;float:left;width:100%;}.signup-form .signup-container p{font-size:14px;color:#fff;float:left;width:100%;}.signup-form .signup-container input{background-color:#fff;padding:16px 0 16px 20px;font-size:16px;font-weight:bold;font-family:'Montserrat',serif!important;}.signup-form .signup-container .email{width:50%;float:left;margin:15px 5% 28px 0;}.signup-form .signup-container .zip{width:15%;float:left;margin:15px 0 28px 0;}.signup-form .signup-container button{width:15%;float:left;margin:15px 0 28px 5%;padding:16px 6px 17px;font-size:18px;background-color:#bd0000;color:#fff;border:none;font-weight:bold;font-family:'Montserrat',serif;}::-webkit-input-placeholder{font-size:16px;color:rgb(112,112,112);font-weight:bold;}::-moz-placeholder{font-size:16px;color:rgb(112,112,112);font-weight:bold;}:-ms-input-placeholder{font-size:16px;color:rgb(112,112,112);font-weight:bold;}:-moz-placeholder{font-size:16px;color:rgb(112,112,112);font-weight:bold;}.home-container .media{clear:both;}.gray-container{margin:0;border-right:none;border-left:none;padding-bottom:40px;}.gray-container .container #root_left{margin-right:2%;}.gray-container .container #root_right{width:36%;}#text_root{margin-bottom:0;}#text_root h2{padding-top:28px;padding-bottom:20px;}#text_root p{color:#4e4d56;font-size:12px;max-width:730px;margin:0 auto;line-height:21px;}#text_root p a{color:#b63639;}.icon-title h5{letter-spacing:.1em;}.icon-title h5 a{color:#b20107}.mobile_menu_icon{color:#bc0000!important;}.mobile_menu_icon span{background-color:#bc0000!important;}.mobile_menu_icon.active span{background-color:#fff!important;}.mobile_menu_icon span:before,.mobile_menu_icon span:after{background-color:#bc0000!important;}.twitter_posts{padding:120px 0 67px 0}.social{border-bottom:4px solid #fff;}.social .social_item{text-transform:none;}#join-trump-w{position:absolute;top:-145px;left:0;margin:0;padding:20px 20px 20px 0;width:360px;height:320px;}#join-trump-w .top-h{background-color:#2e345f;opacity:0.90;height:111px;width:100%;margin:0;padding:0;}#join-trump-w .top-h h3{color:#fff;margin:0;padding:10px 33px 11px;font-family:'Montserrat',serif;font-size:30px;font-weight:normal;line-height:45px;text-align:left;text-transform:none;}#join-trump-w .top-h h3 span{font-size:34px!important;font-weight:bold;}#join-trump-w .bottom-h{background-color:#363c67;height:191px;width:100%;margin:0;padding:0;}#join-trump-w .donate-amounts{height:45px;padding:35px 33px 20px;}#join-trump-w .donate-amounts a{padding:10px 13px;margin:0 3px;color:#fff;font-size:18px;font-weight:bold;border:solid 1px #fff;border-radius:4px;}#join-trump-w .donate-amounts a.btn-active{background:#fff;color:#af0208;}#join-trump-w .donate-amounts a:hover{background:#fff;color:#af0208;}.aBtn{margin:0 auto;position:relative;text-align:center;padding:0 33px 25px;}.aBtn a.BtnNext{position:relative;display:block;height:45px;width:215px;padding:8px 40px;margin:0 auto;background:none repeat scroll 0 0 #00bf00;cursor:pointer;border-radius:4px;color:#FFF;text-align:center;line-height:45px;font-weight:bold;font-size:24px;outline:0 none;white-space:nowrap;overflow:hidden;border-color:#00bf00;cursor:pointer;}@media only screen and (max-width: 1100px) {.signup-form{min-width:1px;background-position:75%;}.signup-form .signup-container{width:100%;padding:0 15px;}}@media only screen and (max-width: 1024px) and (min-width: 768px) {.hero .hero_image img{max-width:none;margin-left:-150px;}}@media only screen and (max-width: 900px) and (min-width: 768px) {.hero .hero_image img{margin-left:-250px;}}@media only screen and (max-width: 850px) and (min-width: 768px) {.hero .hero_image img{margin-left:-300px;}}@media only screen and (max-width: 880px) {header .brand{top:0px!important;}}@media only screen and (max-width: 1024px) and (min-width: 768px) {.hero .hero_image img{max-width:none;margin-left:-150px;}}@media only screen and (max-width: 900px) and (min-width: 768px) {.hero .hero_image img{margin-left:-250px;}}@media only screen and (max-width: 850px) and (min-width: 768px) {.hero .hero_image img{margin-left:-300px;}}@media only screen and (max-width: 1080px) {.home-container .newsletter .introinnerw{width:100%;}.home-container .gray-container #root_left,.home-container .gray-container #root_right{width:100%;}.gray-container .container{width:95%;padding:0;margin:0 auto;}.gray-container .container #root_left{margin-right:0;}.media .releases .release_item{margin:20px auto;}.media .multimedia iframe,.media .multimedia img{max-width:100%!important;max-height:100%!important;margin:0 auto;}}@media screen and (max-width: 880px) {header nav ul li{border-left:none;}header nav ul li a{line-height:40px!important;}}@media only screen and (max-width: 675px) {header #navigation nav{margin-top:30px;}}@media only screen and (max-width: 975px) {header #navigation nav{margin-top:30px;}.home-container .newsletter{height:auto;min-height:230px;}.home-container .newsletter .introinnerw #introptext{position:relative;margin:0 0 0 auto;top:0;width:50%;right:15px}}@media only screen and (max-width: 800px) {.home-container .newsletter{height:auto;min-height:230px;}.home-container .newsletter .introinnerw #introptext{position:relative;margin:0 auto;top:0;padding:15px 0;width:80%;right:0}#join-trump-w{position:relative;top:0;left:0;margin:0 auto;}}@media (max-width: 767px) {header nav ul li a{line-height:40px!important;}header nav ul li{border-left:none;}.hero{min-width:inherit;min-height:inherit;height:auto;}.hero .hero_image{min-width:inherit!important;}.hero .hero_image img{max-width:100%;min-height:inherit;display:block;}.hero .hero_message{bottom:4%;margin-left:0;left:4%;width:92%;background-size:100% 100%;height:calc(100% - 66px);padding:20px 0;}.hero .hero_message h1{font-size:20px;line-height:45px;}.hero .hero_message h1 span{font-size:50px;padding:0;}#wrapper header{height:65px;}#join-trump-w .donate-amounts{padding:25px 33px 25px;line-height:50px;}.newsletter{padding-top:0;}header{overflow:visible;}.signup-form{padding:20px;width:360px;height:320px;margin:0 auto 25px;background-position:0;}.signup-form .signup-container{padding:0}.signup-form .signup-container .email{width:calc(100% - 20px);padding:19px 0 20px 20px;margin:0 0 40px;}.signup-form .signup-container .zip{width:calc(45% - 20px);margin-right:5%;}.signup-form .signup-container button{width:45%;margin-left:5%;}}@media only screen and (max-width: 700px) {header nav ul li a{line-height:40px!important;}header nav ul li{border-left:none;}#hero_wrapper{background-position:10%;}}@media only screen and (max-width: 625px) {header nav ul li a{line-height:40px!important;}header nav ul li{border-left:none;}#hero_wrapper{background-position:15%;}.home-container .newsletter .introinnerw #introptext{right:inherit;}}@media only screen and (max-width: 550px) {header nav ul li a{line-height:40px!important;}header nav ul li{border-left:none;}#hero_wrapper{background-position:20%;}}@media only screen and (max-width: 425px) {header nav ul li a{line-height:40px!important;}header nav ul li{border-left:none;}#join-trump-w{width:100%;padding:0;}.signup-form{width:95%;padding:25px 2.5%;}.home-container .newsletter .introinnerw #introptext{right:inherit;}}@media only screen and (max-width: 360px) {header nav ul li a{line-height:40px!important;}header nav ul li{border-left:none;}#hero_wrapper{background-position:25%;}#join-trump-w .top-h h3{padding:10px 25px 11px;font-size:28px;}#join-trump-w .donate-amounts{padding:25px 0 25px;}#join-trump-w .donate-amounts a{margin:0 1%;padding:10px 13px;}.aBtn{padding:0;}.home-container .newsletter .introinnerw #introptext{right:inherit;}}.join-mvmnt{width:98%;margin:0 auto 20px;text-align:center;margin-bottom:35px;}.supp-count span{background-color:#c8102e;border-radius:10px;color:#fff;font-size:70px;padding:13px 44px;margin:0 3px;}.supp-count span:first-child{margin-left:0;}.supp-count span:last-child{margin-right:0;}.supp-joined{margin:25px 0 25px;}.supp-joined h2{background-color:#c8102e;border-radius:10px;color:#fff;font-family:'Montserrat',serif;font-size:22px;padding:15px 0 14px;}.djt-action-box{width:32%;margin:0 2% 0 0;float:left;background-color:#2b3260;text-align:center;}.djt-action-box p{font-size:22px;color:#fff;}.djt-action-box.djt-text-box{padding:53px 0 54px;}.djt-action-box.djt-text-box img{max-width:40px;}.djt-action-box.djt-call-box{padding:91px 0;}.djt-action-box.djt-call-box img{max-width:80%;}.djt-action-box.djt-action-donate{margin:0;padding:97px 0;}.djt-action-donate .djt-donate-call{padding:15px;margin:12px 62px 0;background-color:#bd0100;}.djt-action-donate:hover .djt-donate-call{background-color:#e50201;}footer{height:auto;}@media screen and (max-width: 1024px) {.djt-action-box{width:calc(100% - 20px);max-width:345px;float:none;margin:10px auto;}.djt-action-box.djt-action-donate{margin:10px auto;}}@media screen and (max-width: 395px) {.djt-action-donate .djt-donate-call{margin:25px 35px 0;}}@media screen and (max-width: 340px) {.djt-action-donate .djt-donate-call{margin:25px 20px 0;}}</style>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    var donation_link = 'https://secure.donaldjtrump.com/donate-homepage/';
+    var $donate_amounts = $('.donate-amounts');
+    var $donate_amounts_a = $donate_amounts.find('a');
+    var $btn_next = $('.aBtn').find('.BtnNext');
+
+    $donate_amounts.on('click', 'a', function(e) {
+        e.preventDefault();
+
+        if ( $donate_amounts.hasClass('adobe-test') ) {
+            // get amount from this button
+            var don_amount = this.getAttribute( 'data-amount' );
+            if ( window.location.search ) {
+                this.href = donation_link + window.location.search + '&amount=' + don_amount;
+            } else {
+                this.href = donation_link + '?utm_campaign=djt_website_donate&utm_source=website&utm_medium=web&utm_content=mid_donate&amount=' + don_amount;
+            }
+            window.location = this.href;
+        }
+
+        // remove active class from all a elements
+        $donate_amounts_a.removeClass( 'btn-active' );
+
+        // set this button active/highlighted
+        this.className = 'btn-active';
+
+        // get amount from this button
+        var don_amount = this.getAttribute( 'data-amount' );
+
+        // set title of button
+        $btn_next[0].title = 'Donate $' + don_amount;
+
+        if ( window.location.search ) {
+            $btn_next[0].href = donation_link + window.location.search + '&amount=' + don_amount;
+        } else {
+            $btn_next[0].href = donation_link + '?utm_campaign=djt_website_donate&utm_source=website&utm_medium=web&utm_content=mid_form&amount=' + don_amount;
+        }
+
+        return false;
+    });
+});
+</script>
+<link rel="shortcut icon" href="https://assets.donaldjtrump.com/_july16/icons/favicon.ico?v=1.3">
+<link rel="apple-touch-icon" sizes="57x57" href="https://assets.donaldjtrump.com/_july16/icons/57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://assets.donaldjtrump.com/_july16/icons/60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://assets.donaldjtrump.com/_july16/icons/72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://assets.donaldjtrump.com/_july16/icons/76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://assets.donaldjtrump.com/_july16/icons/114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://assets.donaldjtrump.com/_july16/icons/120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://assets.donaldjtrump.com/_july16/icons/144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://assets.donaldjtrump.com/_july16/icons/152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://assets.donaldjtrump.com/_july16/icons/180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://assets.donaldjtrump.com/_july16/icons/192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://assets.donaldjtrump.com/_july16/icons/32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://assets.donaldjtrump.com/_july16/icons/96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://assets.donaldjtrump.com/_july16/icons/16x16.png">
+<link rel="manifest" href="https://assets.donaldjtrump.com/_july16/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#bd0000">
+<meta name="msapplication-TileImage" content="https://assets.donaldjtrump.com/_july16/icons/144x144.png">
+<meta name="theme-color" content="#bd0000">
+ 
+<link rel="stylesheet" href="https://assets.donaldjtrump.com/_july16/oneclickdonate/quick-donate.min.css" type="text/css">
+<script src="https://assets.donaldjtrump.com/_july16/oneclickdonate/quick-donate.min.js" type="text/javascript"></script>
+ 
+</head>
+<body>
+<div id="wrapper">
+ 
+<div id="top_container">
+<div id="top_navigation">
+<ul>
+<li><a href="/schedule/">Schedule</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+</ul>
+</div>
+</div>
+<header>
+<div class="container">
+<div class="brand">
+<a href="https://www.donaldjtrump.com/" title="Make America Great Again! | Donald J Trump for President">
+<img src="https://assets.donaldjtrump.com/vphome/tp_newer_logo.png" srcset="https://assets.donaldjtrump.com/vphome/tp_newer_logo@2x.png 2x" alt="Trump Pence Logo">
+</a>
+</div>
+<a class="mobile_menu_icon" href="javascript:;"><span></span></a>
+<nav>
+<ul>
+<li class="mobile_only"><a href="/about">About</a></li>
+<li class="mobile_only"><a href="/schedule">Schedule</a></li>
+<li class="mobile_only"><a href="/issues">Issues</a></li>
+<li>
+<a href="/policies/">Positions</a>
+<ul style="width: 340px;">
+<li><a href="/contract/" class="active">Contract with the American Voter</a></li>
+<li><a href="https://www.donaldjtrump.com/policies/child-care/">Child Care</a></li><li><a href="https://www.donaldjtrump.com/policies/constitution-and-second-amendment/">Constitution and Second Amendment</a></li><li><a href="https://www.donaldjtrump.com/policies/cyber-security/">Cybersecurity</a></li><li><a href="https://www.donaldjtrump.com/policies/economy/">Economy</a></li><li><a href="https://www.donaldjtrump.com/policies/education/">Education</a></li><li><a href="https://www.donaldjtrump.com/policies/energy/">Energy</a></li><li><a href="https://www.donaldjtrump.com/policies/foreign-policy-and-defeating-isis/">Foreign Policy and Defeating ISIS</a></li><li><a href="https://www.donaldjtrump.com/policies/health-care/">Health Care</a></li><li><a href="https://www.donaldjtrump.com/policies/immigration/">Immigration</a></li><li><a href="https://www.donaldjtrump.com/policies/an-americas-infrastructure-first-plan/">INFRASTRUCTURE</a></li><li><a href="https://www.donaldjtrump.com/policies/national-defense/">National Defense</a></li><li><a href="https://www.donaldjtrump.com/policies/regulations/">Regulations</a></li><li><a href="https://www.donaldjtrump.com/policies/tax-plan/">Tax Plan</a></li><li><a href="https://www.donaldjtrump.com/policies/trade/">Trade</a></li><li><a href="https://www.donaldjtrump.com/policies/veterans-affairs-reform/">Veterans Affairs Reform</a></li>
+</ul>
+</li>
+<li>
+<a href="/states/">States</a>
+<ul style="width: 200px;">
+<li><a href="https://www.donaldjtrump.com/states/arizona">Arizona</a></li><li><a href="https://www.donaldjtrump.com/states/colorado">Colorado</a></li><li><a href="https://www.donaldjtrump.com/states/florida">Florida</a></li><li><a href="https://www.donaldjtrump.com/states/georgia">Georgia</a></li><li><a href="https://www.donaldjtrump.com/states/indiana">Indiana</a></li><li><a href="https://www.donaldjtrump.com/states/iowa">Iowa</a></li><li><a href="https://www.donaldjtrump.com/states/maine">Maine</a></li><li><a href="https://www.donaldjtrump.com/states/michigan">Michigan</a></li><li><a href="https://www.donaldjtrump.com/states/minnesota">Minnesota</a></li><li><a href="https://www.donaldjtrump.com/states/nevada">Nevada</a></li><li><a href="https://www.donaldjtrump.com/states/new-hampshire">New Hampshire</a></li><li><a href="https://www.donaldjtrump.com/states/north-carolina">North Carolina</a></li><li><a href="https://www.donaldjtrump.com/states/ohio">Ohio</a></li><li><a href="https://www.donaldjtrump.com/states/pennsylvania">Pennsylvania</a></li><li><a href="https://www.donaldjtrump.com/states/virginia">Virginia</a></li>
+</ul>
+</li>
+<li><a href="#" class="pop_form">Get Involved</a></li>
+<li>
+<a href="/media">Media</a>
+<ul style="width: 200px;">
+<li><a href="/content-center/">Content Center</a></li>
+<li><a href="https://www.donaldjtrump.com/media/category/in-the-news">In The News</a></li><li><a href="https://www.donaldjtrump.com/media/category/video">Video</a></li><li><a href="https://www.donaldjtrump.com/media/category/speeches">Speeches</a></li>
+<li><a href="/press-releases/">Press Releases</a></li>
+<li><a href="/press-releases/category/endorsements/">Endorsements</a></li>
+</ul>
+</li>
+<li class="mobile_only"><a href="/press-releases">Press Releases</a></li>
+<li class="mobile_only"><a href="/news/category/video/">Video</a></li>
+<li class="mobile_only"><a href="/gallery">Gallery</a></li>
+<li><a href="http://shop.donaldjtrump.com">Shop</a></li>
+<li><a href="https://secure.donaldjtrump.com/we-made-history?amount=150&utm_campaign=djt_website_donate&utm_source=website&utm_medium=web&utm_content=top_nav" id="nav_donate">Contribute</a></li>
+</ul>
+</nav>
+<br class="clear">
+</div>
+</header>
+<section class="hero">
+<div class="hero_image">
+<img src="https://assets.donaldjtrump.com/_landings/djt_home/djt_homepage_desktopb.png" alt="Trump Banner">
+</div>
+</section>
+<div class="home-container">
+<section class="newsletter">
+<div class="introinnerw">
+<div id="join-trump-w">
+<div class="top-h">
+<h3><span>We Made History</span><br>America is Back</h3>
+</div>
+<div class="bottom-h">
+<div class="donate-amounts">
+<a data-amount="10" href="https://secure.donaldjtrump.com/we-made-history/">$10</a>
+<a data-amount="25" href="https://secure.donaldjtrump.com/we-made-history/">$25</a>
+<a data-amount="50" href="https://secure.donaldjtrump.com/we-made-history/">$50</a>
+<a data-amount="100" href="https://secure.donaldjtrump.com/we-made-history/">$100</a>
+</div>
+<div class="aBtn">
+<a class="BtnNext" title="Donate" href="https://secure.donaldjtrump.com/we-made-history/?amount=150&amp;utm_campaign=djt_website_donate&amp;utm_source=website&amp;utm_medium=web&amp;utm_content=mid_donate">Contribute</a>
+</div>
+</div>
+</div>
+<div id="introptext">
+<p>We showed America the silent majority is no longer silent. Today, we created an America that WINS again. Today, we made our hopes, our dreams – our limitless potential – a reality. Today, we made history. Today, we created a government that is once again of, by and for the people.</p>
+<p>Thank you, America. I will not let you down. I will always be your voice. I will always be your champion. Now it’s time to get to work – to unite, to prosper, to become stronger. Together, I have no doubt we have taken the first step to Make America Great Again!</p>
+</div>
+</div>
+</section>
+<section class="signup-form">
+<div class="signup-container">
+<h4>Be the first to know</h4>
+<p>Sign-up to receive the most up-to-date Team Trump news, announcements and event information.</p>
+<form id="newsletter_signup" class=" newsletter_signup" method="post" action="https://www.donaldjtrump.com//" enctype="multipart/form-data">
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="20"/>
+<input type="hidden" name="ACTU" value="94"/>
+<input type="hidden" name="FDATA" value="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"/>
+<input type="hidden" name="site_id" value="1"/>
+<input type="hidden" name="csrf_token" value="79345b9e988ff59feae5de5a0ffd2b619b8650d5"/>
+</div>
+<div class="dform"></div>  
+<input name="fields[265]" type="email" class="email" autocomplete="email" x-autocompletetype="email" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Email Address*" required>
+<input name="fields[266]" type="tel" maxlength="20" placeholder="Zip Code" class="zip" autocomplete="postal-code" x-autocompletetype="postal-code" autocompletetype="postal-code">
+<button type="submit" name="submit-btn">I'm in &nbsp;&gt;&gt;</button>
+</form>
+</div>
+</section>
+<section class="media">
+<div class="container">
+<div class="djt-action-box djt-text-box">
+<img src="https://assets.donaldjtrump.com/_july16/img/djt-trump-phone.png" srcset="https://assets.donaldjtrump.com/_july16/img/djt-trump-phone@2x.png">
+<p>Text <span>TRUMP</span><br> to <span>88022</span><br> to get exclusive<br> updates*</p>
+</div>
+<a href="https://talk.donaldjtrump.com/"><div class="djt-action-box djt-call-box">
+<img src="https://assets.donaldjtrump.com/_july16/img/djt-trumptalk-homepagecta-logo.png" srcset="https://assets.donaldjtrump.com/_july16/img/djt-trumptalk-homepagecta-logo@2x.png">
+<p>Make calls from home.</p>
+</div></a>
+<a href="tel:18443582016"><div class="djt-action-box djt-action-donate">
+<p>DONATE BY PHONE</p>
+<p class="djt-donate-call">1-844-358-2016</p>
+</div></a>
+<div style="clear:both"></div>
+</div>
+<div class="container" style="padding-top:50px">
+<div id="root_left">
+<div class="press">
+<h5><a href="/media">In the News</a></h5>
+<article class="press_item">
+<h6>- November 08, 2016 -</h6>
+<h2><a href="https://www.donaldjtrump.com/media/icymi-trumps-final-speech-a-message-of-hope-to-michigan-voters">​ICYMI: Trump&#8217;s Final Speech A Message Of Hope To Michigan Voters</a></h2>
+<p style="margin-bottom: 5px;"><a href="" onclick="window.open (this.href); return false;"><i></i></a></p>
+</article>
+<article class="press_item">
+<h6>- November 07, 2016 -</h6>
+<h2><a href="https://www.donaldjtrump.com/media/gen.-flynn-the-people-of-this-country-have-an-easy-choice">Gen. Flynn: The people of this country have an easy choice</a></h2>
+<p style="margin-bottom: 5px;"><a href="http://video.foxnews.com/v/5199702466001/?playlist_id=930909787001#sp=show-clips" onclick="window.open (this.href); return false;"><i>Fox & Friends</i></a></p>
+<p>General Flynn weighs in on the clear choice American’s have to elect a Trump Administration which will provide opportunity with a vision for the future and stop the corrupt establishment that is Washington.</p>
+</article>
+</div>
+<div class="releases">
+<h5><a href="/press-releases">Press Releases</a></h5>
+<article class="release_item">
+<h6>- November 08, 2016 -</h6>
+<h2><a href="https://www.donaldjtrump.com/press-releases/icymi-exclusive-its-full-bore-ahead-for-fbis-clinton-foundation-probe">ICYMI: EXCLUSIVE: It’s Full-Bore Ahead For FBI’s Clinton Foundation Probe</a></h2>
+</article>
+<article class="release_item">
+<h6>- November 08, 2016 -</h6>
+<h2><a href="https://www.donaldjtrump.com/press-releases/icymi-trumps-final-speech-a-message-of-hope-to-michigan-voters">​ICYMI: Trump&#8217;s Final Speech A Message Of Hope To Michigan Voters</a></h2>
+</article>
+<article class="release_item">
+<h6>- November 07, 2016 -</h6>
+<h2><a href="https://www.donaldjtrump.com/press-releases/clintons-globalist-trade-policies-devastated-mi-oh-pa-nc-nh">​Clinton’s Globalist Trade Policies Have Been Devastating for American Jobs</a></h2>
+</article>
+</div>
+</div>
+<div id="root_right">
+<div class="multimedia">
+<h5><a href="/news/category/video/">Video</a></h5>
+<script type="text/javascript" src="https://video.foxnews.com/v/embed.js?id=5199702466001&w=466&h=263"></script>
+<h4 style="text-align: center;">Gen. Flynn: The people of this country have an easy choice</h4>
+<br><br><script type="text/javascript" src="https://video.foxnews.com/v/embed.js?id=5199241057001&w=466&h=263"></script>
+<h4 style="text-align: center;">Kellyanne Conway: Clinton &#8216;lies for a living&#8217;</h4>
+<br><br><script type="text/javascript" src="https://video.foxnews.com/v/embed.js?id=5193973614001&w=466&h=263"></script>
+<h4 style="text-align: center;">Trump edges Clinton in Ohio polls</h4>
+<br><br>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</section>
+</div>
+<div id="push"></div>
+</div>
+<footer>
+<div class="social">
+<a href="https://twitter.com/realdonaldtrump" class="social_item twitter" target="_blank">twitter</a>
+<a href="https://www.facebook.com/DonaldTrump" class="social_item facebook" target="_blank">facebook</a>
+<a href="https://instagram.com/realdonaldtrump/" class="social_item instagram" target="_blank">instagram</a>
+<a href="https://www.youtube.com/donaldtrump" class="social_item youtube" target="_blank">youtube</a>
+</div>
+<p><span class="white_box">Paid for by Donald J. Trump for President, Inc.</span></p>
+<p style="margin-bottom: 5px;"><a href="/contact/">Contact The Campaign</a> - <a href="/about/privacy-policy/">Privacy Policy</a> - Tel: <a href="tel:6467361779">646-736-1779</a></p>
+<p style="margin: 0 0 5px 0;padding: 0 10%;width: 80%;">
+*By entering your mobile number you are agreeing to receive periodic text messages from Donald J. Trump for President, Inc.<br>
+Message and data rates may apply. Text "STOP" to opt-out. T&C/Privacy Policy: <a href="https://www.donaldjtrump.com/sms-terms/88022" rel="nofollow">sms-terms/88022</a>
+</p>
+<a href="http://www.parscale.com" id="web_developer">Web Design by Giles-Parscale</a>
+ 
+<script type="text/javascript">_satellite.pageBottom();</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 962628614;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962628614/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+ 
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+twttr.conversion.trackPid('nus1w', { tw_sale_amount: 0, tw_order_quantity: 0 });
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nus1w&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/>
+</noscript>
+ 
+</footer>
+<div id="popup_bkg"></div>
+<div id="popup_form_wrapper">
+<div id="popup_form">
+<div id="popup_close">
+<a href="#"><img src="https://assets.donaldjtrump.com/site/close.jpg" alt="Close"></a>
+</div>
+<div id="popup_top">
+<h2><span>Sign Up</span></h2>
+<h3>To Receive Updates From Donald J. Trump</h3>
+</div>
+<div id="popup_form_items">
+<script type="text/javascript" src="//www.donaldjtrump.com/themes/third_party/forms/forms_base.js"></script><form id="new_submission" class=" sign_up" method="post" action="https://www.donaldjtrump.com//" enctype="multipart/form-data">
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="20"/>
+<input type="hidden" name="ACTU" value="94"/>
+<input type="hidden" name="FDATA" value="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"/>
+<input type="hidden" name="site_id" value="1"/>
+<input type="hidden" name="csrf_token" value="79345b9e988ff59feae5de5a0ffd2b619b8650d5"/>
+</div>
+<div class="dform"><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_1" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_first_name dform_required" id="forms_field_2" style=""><label class="dform_label" for="ddform_2">First Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[2]" value="" class="text required validate[required] " id="ddform_2" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_last_name dform_required" id="forms_field_6" style=""><label class="dform_label" for="ddform_6">Last Name <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[6]" value="" class="text required validate[required] " id="ddform_6" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_10" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_email dftop_label field_email_address dform_required" id="forms_field_3" style=""><label class="dform_label" for="ddform_3">Email Address <span class="req">*</span></label><div class="dform_container"><input type="email" name="fields[3]" value="" class="text  required validate[required,custom[email]] " id="ddform_3" placeholder="" data-placeholder=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_mobile_number " id="forms_field_7" style=""><label class="dform_label" for="ddform_7">Mobile Number</label><div class="dform_container"><input type="text" name="fields[7]" value="" class="text " id="ddform_7" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_11" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_text_input dftop_label field_address " id="forms_field_4" style=""><label class="dform_label" for="ddform_4">Address</label><div class="dform_container"><input type="text" name="fields[4]" value="" class="text " id="ddform_4" placeholder="" data-placeholder="" maxlength=""/></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_city " id="forms_field_8" style=""><label class="dform_label" for="ddform_8">City</label><div class="dform_container"><input type="text" name="fields[8]" value="" class="text " id="ddform_8" placeholder="" data-placeholder="" maxlength=""/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_12" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_select dftop_label field_state dform_required" id="forms_field_5" style=""><label class="dform_label" for="ddform_5">State <span class="req">*</span></label><div class="dform_container"><select name="fields[5]" class=" required validate[required] " id="ddform_5">
+<option value="">Please Choose</option>
+<option value="Other">Other</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AS">American Samoa</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="MP">Northern Marianas</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="VI">U.S. Virgin Islands</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+</select></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"><div class="dform_element dform_text_input dftop_label field_zip_code dform_required" id="forms_field_9" style=""><label class="dform_label" for="ddform_9">Zip Code <span class="req">*</span></label><div class="dform_container"><input type="text" name="fields[9]" value="" class="text required validate[required] " id="ddform_9" placeholder="" data-placeholder="" maxlength="5"/></div></div></div><br clear="all"></div></div></div><div class="dform_element dform_columns_2 dftop_label field_columns_2 " id="forms_field_27" style=""><div class="dform_container"><div class="dfcolumns"><div class="column sortable" data-number="1" style="width:50%"><div class="dform_element dform_checkbox dftop_label field_volunteer " id="forms_field_26" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[26]-0"><input type="checkbox" name="fields[26][]" value="Volunteer" class="" id="fields[26]-0"/>&nbsp; I Would Like to Volunteer</label></li></ul></div></div></div><div class="column column-last sortable" data-number="2" style="width:50%"></div><br clear="all"></div></div></div><div class="dform_element dform_mailinglist dftop_label field_mailinglist " id="forms_field_24" style=""><div class="dform_container"><ul class="checkboxes"><li><label><input type="checkbox" name="fields[24]" value="yes" checked="checked"/>&nbsp;Yes, please subscribe me to the Donald J. Trump for President email list</label></li></ul></div></div><div class="dform_element dform_checkbox dftop_label field_text_messages " id="forms_field_240" style=""><div class="dform_container"><ul class="checkboxes"><li><label for="fields[240]-0"><input type="checkbox" name="fields[240][]" value="Yes" checked="checked" class="" id="fields[240]-0"/>&nbsp; Yes, please send me periodic text messages from Donald J. Trump for President</label></li></ul></div></div><div class="dform_element dform_html field_untitled " id="forms_field_241" style=""><div class="dform_container"><em>By subscribing with your mobile number you are agreeing to receive periodic text messages from Donald J. Trump for President, Inc. Message data rates may apply. Text "STOP" to opt-out. T&C/Privacy Policy: <a href="http://www.sms-terms.com/88022/" target="_blank">sms-terms.com/88022</a></em></div></div><div class="dform_element dform_textarea dftop_label field_comments " id="forms_field_23" style=""><label class="dform_label" for="ddform_23">Comments</label><div class="dform_container"><textarea name="fields[23]" cols="50" rows="4" class="" id="ddform_23" placeholder="" data-placeholder=""></textarea></div></div><div class="hiddenFields">
+<input type="hidden" name="fields[63]" value=""/>
+</div><div class="dform_element dform_captcha dftop_label field_captcha " id="forms_field_205" style=""><label class="dform_label" for="ddform_205">CAPTCHA</label><div class="dform_container"><div class="g-recaptcha" data-sitekey="6LfFRBsTAAAAAID_gT8DfxJs_9bZkSdvI3fl8ilA" data-theme="light" data-size="normal"></div><script type="text/javascript" src="https://www.google.com/recaptcha/api.js?"></script></div></div><div class="dform_element submit_button"> <div class="dform_container"><div class="dfinput_full"><input type="submit" class="submit" name="submit_button" value="Submit" data-value="Submit" data-wait="Verifying..."/></div></div></div></div></form>
+</div>
+</div>
+</div>
+</body>
+</html>
